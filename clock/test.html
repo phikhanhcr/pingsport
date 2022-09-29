@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="display: flex">
+
+    <div id="day">
+      <div class="base-timer">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+            <path id="day-base-timer-path-remaining" stroke-dasharray="283 283" class="base-timer__path-remaining" d="
+                M 50, 50
+                m -45, 0
+                a 45,45 0 1,0 90,0
+                a 45,45 0 1,0 -90,0
+              "></path>
+          </g>
+        </svg>
+        <span id="day-base-timer-label" class="base-timer__label">00</span>
+      </div>
+    </div>
+    <div id="hour">
+      <div class="base-timer">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+            <path id="hour-base-timer-path-remaining" stroke-dasharray="283 283" class="base-timer__path-remaining" d="
+                M 50, 50
+                m -45, 0
+                a 45,45 0 1,0 90,0
+                a 45,45 0 1,0 -90,0
+              "></path>
+          </g>
+        </svg>
+        <span id="hour-base-timer-label" class="base-timer__label">00</span>
+      </div>
+    </div>
+    <div id="min">
+      <div class="base-timer">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+            <path id="min-base-timer-path-remaining" stroke-dasharray="283 283" class="base-timer__path-remaining" d="
+                M 50, 50
+                m -45, 0
+                a 45,45 0 1,0 90,0
+                a 45,45 0 1,0 -90,0
+              "></path>
+          </g>
+        </svg>
+        <span id="min-base-timer-label" class="base-timer__label">00</span>
+      </div>
+    </div>
+    <div id="second">
+      <div class="base-timer">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+            <path id="second-base-timer-path-remaining" stroke-dasharray="283 283" class="base-timer__path-remaining" d="
+                M 50, 50
+                m -45, 0
+                a 45,45 0 1,0 90,0
+                a 45,45 0 1,0 -90,0
+              "></path>
+          </g>
+        </svg>
+        <span id="second-base-timer-label" class="base-timer__label">00</span>
+      </div>
+    </div>
+  </div>
+  <button onclick="init(7)">Start</button>
+</body>
+
+<script>
+  // initial time
+  const maxDay = 7;
+  document.getElementById("day-base-timer-label").textContent = maxDay;
+  const PIR2 = 283;
+
+  function init(day) {
+    const maxDay = day;
+    const maxSecond = 60;
+    const maxMin = 60;
+    const maxHour = 24;
+    let timePassedSecond = 0;
+    let timeLeftSecond = maxSecond;
+    let timerInterval = null;
+    let timePassedMin = 0;
+    let timeLeftMin = maxMin;
+    let timePassedHour = 0;
+    let timeLeftHour = maxHour;
+    let timePassedDay = 0;
+    let timeLeftDay = maxDay;
+
+    const timeType = {
+      second: "second",
+      min: "min",
+      hour: "hour",
+      day: "day",
+    };
+
+    startTimer();
+    let checkFirstTime = true;
+    function onFirstTime() {
+      document.getElementById("day-base-timer-label").textContent =
+        maxDay - 1;
+      document.getElementById("hour-base-timer-label").textContent =
+        maxHour - 1;
+      document.getElementById("min-base-timer-label").textContent =
+        maxMin - 1;
+      timeLeftSecond = maxSecond - 1;
+      timeLeftMin = maxMin - 1;
+      timeLeftHour = maxHour - 1;
+      timeLeftDay = maxDay - 1;
+      setCircleDasharray(timeLeftSecond, timeType.second, maxSecond);
+      setCircleDasharray(timeLeftMin, timeType.min, maxMin);
+      setCircleDasharray(timeLeftHour, timeType.hour, maxHour);
+      setCircleDasharray(timeLeftDay, timeType.day, maxDay);
+    }
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        if (checkFirstTime) {
+          console.log("123");
+          onFirstTime();
+          checkFirstTime = false;
+        }
+        timePassedSecond = timePassedSecond += 1;
+        timeLeftSecond = maxSecond - timePassedSecond;
+        document.getElementById(
+          `${timeType.second}-base-timer-label`
+        ).innerHTML = formatTime(timeLeftSecond);
+        setCircleDasharray(timeLeftSecond, timeType.second, maxSecond);
+
+        if (timeLeftSecond === 0) {
+          // decrease
+          timePassedMin = timePassedMin += 1;
+          timeLeftMin = maxMin - timePassedMin;
+          document.getElementById(
+            `${timeType.min}-base-timer-label`
+          ).innerHTML = formatTime(timeLeftMin);
+          setCircleDasharray(timeLeftMin, timeType.min, maxMin);
+          if (timeLeftMin === 0) {
+            timePassedHour = timePassedHour += 1;
+            timeLeftHour = maxHour - timePassedHour;
+            document.getElementById(
+              `${timeType.hour}-base-timer-label`
+            ).innerHTML = formatTime(timeLeftHour);
+            setCircleDasharray(timeLeftHour, timeType.hour, maxHour);
+
+            if (timeLeftHour === 0) {
+              timePassedDay = timePassedDay += 1;
+              timeLeftDay = maxHour - timePassedDay;
+              document.getElementById(
+                `${timeType.hour}-base-timer-label`
+              ).innerHTML = formatTime(timeLeftDay);
+              setCircleDasharray(timeLeftDay, timeType.day, maxDay);
+
+              if (timeLeftDay === 0) {
+                clearInterval(timerInterval);
+              }
+
+              resetTime(timeType.hour);
+            }
+            resetTime(timeType.min);
+          }
+          resetTime(timeType.second);
+        }
+      }, 1000);
+    }
+
+    function resetTime(type) {
+      switch (type) {
+        case timeType.second:
+          timePassedSecond = 0;
+          timeLeftSecond = maxSecond;
+          break;
+        case timeType.min:
+          timePassedMin = 0;
+          timeLeftMin = maxSecond;
+          break;
+        case timeType.hour:
+          timePassedHour = 0;
+          timeLeftHour = maxHour;
+          break;
+        case timeType.day:
+          break;
+      }
+    }
+  }
+
+  function formatTime(time) {
+    if (time < 10) {
+      time = `0${time}`;
+    }
+    return `${time}`;
+  }
+
+  function calculateTimeFraction(timeLeft, maxValue) {
+    const rawTimeFraction = timeLeft / maxValue;
+    return rawTimeFraction - (1 / maxValue) * (1 - rawTimeFraction);
+  }
+
+  function setCircleDasharray(timeLeft, type, maxValue) {
+    const circleDasharray = `${(
+      calculateTimeFraction(timeLeft, maxValue) * PIR2
+    ).toFixed(0)} 283`;
+    console.log({ circleDasharray });
+    document
+      .getElementById(`${type}-base-timer-path-remaining`)
+      .setAttribute("stroke-dasharray", circleDasharray);
+  }
+
+    // function setUI(time, type) {
+    //   if (time == 0) {
+    //     switch (type) {
+    //       case timeType.second:
+    //         timePassedMin = timePassedMin += 1;
+    //         timeLeftMin = maxMin - timePassedMin;
+    //         document.getElementById(
+    //           `${timeType.min}-base-timer-label`
+    //         ).innerHTML = formatTime(timeLeftMin);
+    //         setCircleDasharray(timeLeftMin, timeType.min, maxMin);
+    //         if (timeLeftMin === 0) {
+    //           setUI(timeLeftMin);
+    //         }
+    //         break;
+    //       case timeType.min:
+    //       case timeType.hour:
+    //       case timeType.day:
+    //     }
+    //   }
+    // }
+</script>
+
+</html>

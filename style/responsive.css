@@ -1,13 +1,15 @@
 @media (min-width: 871px) {
-  
 }
 
-.navbar__menu-btn-close { 
+.navbar__menu-btn-close {
   display: none;
   justify-content: center;
   align-items: center;
 }
 @media (max-width: 870px) {
+  .character-dubai {
+    display: none;
+  }
   .navbar-logo {
     padding-left: 16px;
   }
@@ -21,16 +23,16 @@
     display: none;
   }
 
-  
   .navbar-menu_pc {
     display: none;
   }
   .navbar {
     /* padding: 0 16px; */
   }
-  
+
   .nav-mobile-input:checked ~ .navbar-menu_mobile {
     display: block;
+    z-index: 100;
   }
 
   .nav-mobile-input:checked ~ .navbar__menu-btn-show {
@@ -40,4 +42,64 @@
   .nav-mobile-input:checked ~ .navbar__menu-btn-close {
     display: flex !important;
   }
-} 
+
+  .banner {
+    height: 490px;
+  }
+  .base-timer {
+    width: 68px;
+    height: 68px;
+  }
+  .wrapper-countdown {
+    margin-right: 20px;
+  }
+  .banner_scheduler-line {
+    display: none;
+  }
+  .wrapper-schedule {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .wrapper-discount {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .wrapper-banner .count_down-text {
+    font-size: 18px;
+    margin: 36px 0 15px ;
+  }
+
+  .wrapper-banner_scheduler {
+    justify-content: flex-start;
+  }
+
+  .wrapper-discount {
+    font-size: 14px;
+    margin-bottom: 36px;
+    padding-left: 40px;
+  }
+  .wrapper-schedule__time,
+  .milestone {
+    margin-bottom: 0;
+  }
+  .milestone {
+    order: 1;
+    margin-right: 18px;
+  }
+  .wrapper-schedule__time {
+    order: 2;
+    margin-right: 22px;
+  }
+  .wrapper-discount .discount {
+    order: 3;
+  }
+  .base-timer__label {
+    font-size: 24px;
+  }
+  .wrapper-banner_scheduler {
+    padding-left: 40px;
+    margin-top: 37px;
+  }
+}
