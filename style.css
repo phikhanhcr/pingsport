@@ -1,0 +1,233 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  height: var(--header-height);
+  justify-content: space-between;
+  position: relative;
+  background-color: var(--white-color);
+}
+.navbar__menu-btn-show,
+.navbar__menu-btn-close {
+  display: none;
+  padding-right: 24px;
+}
+.navbar-menu_pc {
+  list-style-type: none;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li {
+  /* margin-right: 24px; */
+  font-weight: 500;
+  line-height: 24px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.navbar li:not(:last-of-type):hover {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+.navbar-menu_pc li:last-of-type {
+  margin-right: 0px;
+}
+
+.navbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-logo .logo {
+  margin-right: 12px;
+}
+
+.navbar_menu-auth {
+  display: flex;
+}
+
+.navbar_menu-auth .login {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: 5px 8px;
+  border: 1px solid var(--main-color);
+  margin-right: 12px;
+}
+.navbar-menu_mobile {
+  display: none;
+}
+
+.navbar_menu-auth .signup {
+  color: var(--main-color);
+  padding: 5px 8px;
+  border: 1px solid var(--main-color);
+}
+
+.navbar_menu-auth .signup:hover {
+}
+
+.navbar-menu_mobile {
+  position: absolute;
+  top: 100%;
+  transform-origin: top center;
+  animation: translateX 200ms ease-in-out forwards;
+}
+
+@keyframes translateX {
+  0% {
+    opacity: 0.4;
+    transform: translateX(60px);
+  }
+
+  80% {
+    /* opacity: .8; */
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.navbar-menu_mobile li {
+  margin: 16px 0;
+}
+
+.navbar-menu_mobile {
+  width: 100%;
+  background-color: var(--white-color);
+  padding: 0 16px;
+}
+
+/* Banner */
+
+.banner {
+  height: 402px;
+  width: 100vw;
+  position: relative;
+}
+.overlay-banner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+.wrapper-banner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #aaa;
+  background-image: url(assets/banner.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white-color);
+  z-index: 100;
+}
+
+.wrapper-banner .count_down-text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  z-index: 1;
+}
+.count_down-number {
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  margin-right: 48px;
+  border: 1px solid #ccc;
+}
+
+.wrapper-number {
+  width: 117px;
+  height: 117px;
+  border: 3px solid #50ffee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.count_down-number:last-of-type {
+  margin-right: 0;
+}
+
+.banner_countdown {
+  display: flex;
+  z-index: 1;
+  position: relative;
+}
+
+.character-dubai {
+  position: absolute;
+  background-image: url(assets/images/character.svg);
+  left: 100%;
+  top: -61%;
+}
+
+.milestone {
+  width: 24px;
+  height: 24px;
+  transform: rotate(45deg);
+  border: 3px solid #fff;
+  background-color: var(--main-color);
+  margin-bottom: 12px;
+}
+
+
+.wrapper-discount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.discount {
+  width: 161px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discount.border {
+  background-image: url(/assets/images/wrapper-schedule.svg);
+
+}
+.banner_scheduler {
+  position: relative;
+  display: flex;
+  width: 60%;
+  justify-content: center;
+}
+
+.wrapper-schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 88%;
+}
+.banner_scheduler-line {
+  height: 2px;
+  width: 71%;
+  position: absolute;
+  /* border: 3px solid #ccc; */
+  background-color: #fff;
+  top: 11px;
+  right: 140px;
+}
+
+.discount p {
+  padding: 5px 18px;
+}

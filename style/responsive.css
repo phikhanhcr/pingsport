@@ -1,0 +1,43 @@
+@media (min-width: 871px) {
+  
+}
+
+.navbar__menu-btn-close { 
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 870px) {
+  .navbar-logo {
+    padding-left: 16px;
+  }
+  .navbar__menu-btn-show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar__menu-btn-close {
+    display: none;
+  }
+
+  
+  .navbar-menu_pc {
+    display: none;
+  }
+  .navbar {
+    /* padding: 0 16px; */
+  }
+  
+  .nav-mobile-input:checked ~ .navbar-menu_mobile {
+    display: block;
+  }
+
+  .nav-mobile-input:checked ~ .navbar__menu-btn-show {
+    display: none !important;
+  }
+
+  .nav-mobile-input:checked ~ .navbar__menu-btn-close {
+    display: flex !important;
+  }
+} 
