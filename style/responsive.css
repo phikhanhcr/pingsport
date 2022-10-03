@@ -102,4 +102,24 @@
     padding-left: 40px;
     margin-top: 37px;
   }
+
+  .menu-bar ul {
+    padding-left: 8px;
+    width: 100vw;
+    overflow-x: scroll;
+  }
+
+  .banner-match__list {
+    overflow-x: scroll;
+    padding-left: 8px;
+    width: 100vw;
+  }
+  .banner-match__item {
+    width: 192px;
+  }
+
+  .banner-match__item-wrapper {
+    width: 177px;
+  }
 }
+

@@ -278,3 +278,143 @@
   align-items: center;
   font-weight: 400;
 }
+
+.menu-bar {
+  width: 100%;
+  height: 50%;
+  background-color:   #13B7A7;
+}
+
+.menu-bar ul {
+  display: flex;
+}
+.menu-bar ul li.active {
+  background-color: var(--main-color);
+}
+
+.menu-bar ul li:hover {
+  background-color: var(--main-color);
+}
+
+
+.menu-bar ul li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.menu-bar_link {
+  color: var(--white-color);
+  margin-left: 11px;
+}
+
+.banner-match {
+  height: 407px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/assets/images/menu/background.svg);
+}
+
+.banner-match__list {
+  display: flex;
+}
+
+.wrapper-banner-match {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 407px;
+}
+
+.wrapper-banner-match  h3 {
+  color: var(--white-color);
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+  margin-top: 45px;
+}
+
+
+.banner-match__item {
+  background-color: var(--white-color);
+  width: 192px;
+  height: 224px;
+  padding: 8px;
+  margin: 0px 8px;
+}
+
+.banner-match__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-match__link {
+  background-color:   #13B7A7;
+  color: var(--white-color);
+
+}
+
+.banner-wrapper_team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.wrapper_team-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+.wrapper_team-item img {
+  position: absolute;
+}
+
+.wrapper_team-item span {
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+.wrapper_team-item .left{
+  position: absolute;
+  left: -40px;
+}
+
+
+.wrapper_team-item .right{
+  position: absolute;
+  right: -40px;
+}
+
+.banner-match__separate {
+  margin: 10px 0 6px;
+}
+
+.banner-match__league {
+  display: flex;
+  font-size: 12px;
+}
+.banner-match__league img {
+  margin-right: 8px;
+}
+
+.banner-match__time {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 6px 0 8px;
+}
+
+.banner-match__link {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.banner-team_name {
+  font-weight: 600;
+}

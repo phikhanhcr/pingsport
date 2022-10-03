@@ -58,124 +58,308 @@
         </div>
       </div>
     </div>
-    <div>
-      <div class="banner">
-        <div class="overlay-banner"></div>
+    <div class="banner">
+      <div class="overlay-banner"></div>
 
-        <div class="wrapper-banner">
-          <p class="count_down-text">COUNTDOWN TIMER</p>
-          <div class="banner_countdown">
-            <div class="wrapper-countdown">
-              <div class="base-timer">
-                <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <g class="base-timer__circle">
-                    <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
-                    <path id="day-base-timer-path-remaining" stroke-dasharray="283 283"
-                      class="base-timer__path-remaining" d="
+      <div class="wrapper-banner">
+        <p class="count_down-text">COUNTDOWN TIMER</p>
+        <div class="banner_countdown">
+          <div class="wrapper-countdown">
+            <div class="base-timer">
+              <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g class="base-timer__circle">
+                  <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+                  <path id="day-base-timer-path-remaining" stroke-dasharray="283 283" class="base-timer__path-remaining"
+                    d="
                           M 50, 50
                           m -45, 0
                           a 45,45 0 1,0 90,0
                           a 45,45 0 1,0 -90,0
                         "></path>
-                  </g>
-                </svg>
-                <span id="day-base-timer-label" class="base-timer__label">00</span>
-              </div>
-              <span class="time_type">DAYS</span>
+                </g>
+              </svg>
+              <span id="day-base-timer-label" class="base-timer__label">00</span>
             </div>
-            <div class="wrapper-countdown">
-              <div class="base-timer">
-                <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <g class="base-timer__circle">
-                    <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
-                    <path id="hour-base-timer-path-remaining" stroke-dasharray="283 283"
-                      class="base-timer__path-remaining" d="
+            <span class="time_type">DAYS</span>
+          </div>
+          <div class="wrapper-countdown">
+            <div class="base-timer">
+              <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g class="base-timer__circle">
+                  <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+                  <path id="hour-base-timer-path-remaining" stroke-dasharray="283 283"
+                    class="base-timer__path-remaining" d="
                         M 50, 50
                         m -45, 0
                         a 45,45 0 1,0 90,0
                         a 45,45 0 1,0 -90,0
                       "></path>
-                  </g>
-                </svg>
-                <span id="hour-base-timer-label" class="base-timer__label">00</span>
-              </div>
-              <span class="time_type">HOURS</span>
+                </g>
+              </svg>
+              <span id="hour-base-timer-label" class="base-timer__label">00</span>
             </div>
-            <div class="wrapper-countdown">
-              <div class="base-timer">
-                <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <g class="base-timer__circle">
-                    <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
-                    <path id="min-base-timer-path-remaining" stroke-dasharray="283 283"
-                      class="base-timer__path-remaining" d="
+            <span class="time_type">HOURS</span>
+          </div>
+          <div class="wrapper-countdown">
+            <div class="base-timer">
+              <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g class="base-timer__circle">
+                  <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+                  <path id="min-base-timer-path-remaining" stroke-dasharray="283 283" class="base-timer__path-remaining"
+                    d="
                         M 50, 50
                         m -45, 0
                         a 45,45 0 1,0 90,0
                         a 45,45 0 1,0 -90,0
                       "></path>
-                  </g>
-                </svg>
-                <span id="min-base-timer-label" class="base-timer__label">00</span>
-              </div>
-              <span class="time_type">MINUTES</span>
+                </g>
+              </svg>
+              <span id="min-base-timer-label" class="base-timer__label">00</span>
             </div>
-            <div class="wrapper-countdown">
-              <div class="base-timer">
-                <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <g class="base-timer__circle">
-                    <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
-                    <path id="second-base-timer-path-remaining" stroke-dasharray="283 283"
-                      class="base-timer__path-remaining" d="
+            <span class="time_type">MINUTES</span>
+          </div>
+          <div class="wrapper-countdown">
+            <div class="base-timer">
+              <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g class="base-timer__circle">
+                  <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+                  <path id="second-base-timer-path-remaining" stroke-dasharray="283 283"
+                    class="base-timer__path-remaining" d="
                         M 50, 50
                         m -45, 0
                         a 45,45 0 1,0 90,0
                         a 45,45 0 1,0 -90,0
                       "></path>
-                  </g>
-                </svg>
-                <span id="second-base-timer-label" class="base-timer__label">00</span>
-              </div>
-              <span class="time_type">SECONDS</span>
+                </g>
+              </svg>
+              <span id="second-base-timer-label" class="base-timer__label">00</span>
             </div>
+            <span class="time_type">SECONDS</span>
+          </div>
 
-            <img src="/assets/images/character.svg" class="character-dubai"></img>
-          </div>
-          <div class="wrapper-banner_scheduler">
-            <div class="banner_scheduler">
-              <!-- <div class="banner_scheduler-line"></div> -->
-              <div class="wrapper-schedule">
-                <div class="wrapper-discount">
-                  <span class="wrapper-schedule__time">15/09</span>
-                  <div class="milestone"></div>
-                  <div class="discount border">
-                    <p>Discount 30%</p>
-                  </div>
+          <img src="/assets/images/character.svg" class="character-dubai"></img>
+        </div>
+        <div class="wrapper-banner_scheduler">
+          <div class="banner_scheduler">
+            <!-- <div class="banner_scheduler-line"></div> -->
+            <div class="wrapper-schedule">
+              <div class="wrapper-discount">
+                <span class="wrapper-schedule__time">15/09</span>
+                <div class="milestone"></div>
+                <div class="discount border">
+                  <p>Discount 30%</p>
                 </div>
-                <div class="wrapper-discount">
-                  <span class="wrapper-schedule__time">15/09</span>
-                  <div class="milestone"></div>
-                  <div class="discount border">
-                    <p>Discount 30%</p>
-                  </div>
-                </div>
-                <div class="wrapper-discount">
-                  <span class="wrapper-schedule__time">15/09</span>
-                  <div class="milestone"></div>
-                  <div class="discount border">
-                    <p>Discount 30%</p>
-                  </div>
-                </div>
-                <div class="wrapper-discount ">
-                  <span class="wrapper-schedule__time">15/09</span>
-                  <div class="milestone"></div>
-                  <div class="discount">
-                    <p>Start WC</p>
-                  </div>
-                </div>
-  
               </div>
+              <div class="wrapper-discount">
+                <span class="wrapper-schedule__time">15/09</span>
+                <div class="milestone"></div>
+                <div class="discount border">
+                  <p>Discount 30%</p>
+                </div>
+              </div>
+              <div class="wrapper-discount">
+                <span class="wrapper-schedule__time">15/09</span>
+                <div class="milestone"></div>
+                <div class="discount border">
+                  <p>Discount 30%</p>
+                </div>
+              </div>
+              <div class="wrapper-discount ">
+                <span class="wrapper-schedule__time">15/09</span>
+                <div class="milestone"></div>
+                <div class="discount">
+                  <p>Start WC</p>
+                </div>
+              </div>
+
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-bar">
+      <div class="grid wide">
+        <ul>
+          <li class="active">
+            <img class="menu-bar_img" src="/assets/images/menu/football.svg" alt="">
+            <a class="menu-bar_link" href="#">Football</a>
+          </li>
+          <li>
+            <img class="menu-bar_img" src="/assets/images/menu/football.svg" alt="">
+            <a class="menu-bar_link" href="#">Football</a>
+          </li>
+          <li>
+            <img class="menu-bar_img" src="/assets/images/menu/football.svg" alt="">
+            <a class="menu-bar_link" href="#">Football</a>
+          </li>
+          <li>
+            <img class="menu-bar_img" src="/assets/images/menu/football.svg" alt="">
+            <a class="menu-bar_link" href="#">Football</a>
+          </li>
+          <li>
+            <img class="menu-bar_img" src="/assets/images/menu/football.svg" alt="">
+            <a class="menu-bar_link" href="#">Football</a>
+          </li>
+          <li>
+            <img class="menu-bar_img" src="/assets/images/menu/football.svg" alt="">
+            <a class="menu-bar_link" href="#">Football</a>
+          </li>
+          <li>
+            <img class="menu-bar_img" src="/assets/images/menu/football.svg" alt="">
+            <a class="menu-bar_link" href="#">Football</a>
+          </li>
+          <li>
+            <img class="menu-bar_img" src="/assets/images/menu/football.svg" alt="">
+            <a class="menu-bar_link" href="#">Football</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="banner-match">
+      <div class="gird wide">
+        <div class="wrapper-banner-match">
+          <h3>Top Matches Today</h3>
+          <ul class="banner-match__list">
+            <li class="banner-match__item">
+              <div class="banner-match__item-wrapper">
+                <div class="banner-wrapper_team">
+                  <div class="wrapper_team-item">
+                    <img src="/assets/images/menu/logo.svg" class="left" alt="">
+                    <span class="banner-team_name">Liverpool</span>
+                  </div>
+                  <img class="banner-match__separate" src="/assets/images/menu/separrate-team.svg" alt="">
+                  <div class="wrapper_team-item">
+                    <span class="banner-team_name">Man United</span>
+                    <img src="/assets/images/menu/manu.svg" class="right" alt="">
+                  </div>
+                </div>
+                <div class="banner-match__league">
+                  <img src="/assets/images/menu/premier-league.svg" alt="">
+                  <span>Premier League</span>
+                </div>
+                <div class="banner-match__time">
+                  Jun 8, 20:45
+                </div>
+                <a href="#" class="banner-match__link">Watch</a>
+              </div>
+            </li>
+            <li class="banner-match__item">
+              <div class="banner-match__item-wrapper">
+                <div class="banner-wrapper_team">
+                  <div class="wrapper_team-item">
+                    <img src="/assets/images/menu/logo.svg" class="left" alt="">
+                    <span class="banner-team_name">Liverpool</span>
+                  </div>
+                  <img class="banner-match__separate" src="/assets/images/menu/separrate-team.svg" alt="">
+                  <div class="wrapper_team-item">
+                    <span class="banner-team_name">Man United</span>
+                    <img src="/assets/images/menu/manu.svg" class="right" alt="">
+                  </div>
+                </div>
+                <div class="banner-match__league">
+                  <img src="/assets/images/menu/premier-league.svg" alt="">
+                  <span>Premier League</span>
+                </div>
+                <div class="banner-match__time">
+                  Jun 8, 20:45
+                </div>
+                <a href="#" class="banner-match__link">Watch</a>
+              </div>
+            </li>
+            <li class="banner-match__item">
+              <div class="banner-match__item-wrapper">
+                <div class="banner-wrapper_team">
+                  <div class="wrapper_team-item">
+                    <img src="/assets/images/menu/logo.svg" class="left" alt="">
+                    <span class="banner-team_name">Liverpool</span>
+                  </div>
+                  <img class="banner-match__separate" src="/assets/images/menu/separrate-team.svg" alt="">
+                  <div class="wrapper_team-item">
+                    <span class="banner-team_name">Man United</span>
+                    <img src="/assets/images/menu/manu.svg" class="right" alt="">
+                  </div>
+                </div>
+                <div class="banner-match__league">
+                  <img src="/assets/images/menu/premier-league.svg" alt="">
+                  <span>Premier League</span>
+                </div>
+                <div class="banner-match__time">
+                  Jun 8, 20:45
+                </div>
+                <a href="#" class="banner-match__link">Watch</a>
+              </div>
+            </li>
+            <li class="banner-match__item">
+              <div class="banner-match__item-wrapper">
+                <div class="banner-wrapper_team">
+                  <div class="wrapper_team-item">
+                    <img src="/assets/images/menu/logo.svg" class="left" alt="">
+                    <span class="banner-team_name">Liverpool</span>
+                  </div>
+                  <img class="banner-match__separate" src="/assets/images/menu/separrate-team.svg" alt="">
+                  <div class="wrapper_team-item">
+                    <span class="banner-team_name">Man United</span>
+                    <img src="/assets/images/menu/manu.svg" class="right" alt="">
+                  </div>
+                </div>
+                <div class="banner-match__league">
+                  <img src="/assets/images/menu/premier-league.svg" alt="">
+                  <span>Premier League</span>
+                </div>
+                <div class="banner-match__time">
+                  Jun 8, 20:45
+                </div>
+                <a href="#" class="banner-match__link">Watch</a>
+              </div>
+            </li>
+            <li class="banner-match__item">
+              <div class="banner-match__item-wrapper">
+                <div class="banner-wrapper_team">
+                  <div class="wrapper_team-item">
+                    <img src="/assets/images/menu/logo.svg" class="left" alt="">
+                    <span class="banner-team_name">Liverpool</span>
+                  </div>
+                  <img class="banner-match__separate" src="/assets/images/menu/separrate-team.svg" alt="">
+                  <div class="wrapper_team-item">
+                    <span class="banner-team_name">Man United</span>
+                    <img src="/assets/images/menu/manu.svg" class="right" alt="">
+                  </div>
+                </div>
+                <div class="banner-match__league">
+                  <img src="/assets/images/menu/premier-league.svg" alt="">
+                  <span>Premier League</span>
+                </div>
+                <div class="banner-match__time">
+                  Jun 8, 20:45
+                </div>
+                <a href="#" class="banner-match__link">Watch</a>
+              </div>
+            </li>
+            <li class="banner-match__item">
+              <div class="banner-match__item-wrapper">
+                <div class="banner-wrapper_team">
+                  <div class="wrapper_team-item">
+                    <img src="/assets/images/menu/logo.svg" class="left" alt="">
+                    <span class="banner-team_name">Liverpool</span>
+                  </div>
+                  <img class="banner-match__separate" src="/assets/images/menu/separrate-team.svg" alt="">
+                  <div class="wrapper_team-item">
+                    <span class="banner-team_name">Man United</span>
+                    <img src="/assets/images/menu/manu.svg" class="right" alt="">
+                  </div>
+                </div>
+                <div class="banner-match__league">
+                  <img src="/assets/images/menu/premier-league.svg" alt="">
+                  <span>Premier League</span>
+                </div>
+                <div class="banner-match__time">
+                  Jun 8, 20:45
+                </div>
+                <a href="#" class="banner-match__link">Watch</a>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
