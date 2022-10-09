@@ -5,7 +5,7 @@
 }
 
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;

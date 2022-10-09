@@ -59,8 +59,11 @@
   .wrapper-schedule {
     display: flex;
     justify-content: flex-start;
+    min-width: 100vw;
+    width: 100vw;
     flex-direction: column;
   }
+
   .wrapper-discount {
     flex-direction: row;
     align-items: center;
@@ -111,7 +114,7 @@
 
   .banner-match__list {
     overflow-x: scroll;
-    padding-left: 8px;
+    padding-left: 16px;
     width: 100vw;
   }
   .banner-match__item {
@@ -119,7 +122,88 @@
   }
 
   .banner-match__item-wrapper {
-    width: 177px;
+    /* width: 177px; */
+  }
+  .wrapper-schedule__lining-hoz {
+    display: none;
+  }
+  .wrapper-schedule__lining-ver {
+    display: block;
+  }
+
+  .group-match-list {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
+  .list-match__schedule-day {
+    overflow: hidden;
+    overflow-x: scroll;
+    width: auto;
+  }
+  .banner-match__item {
+    margin-right: 20px;
+  }
+.banner-match__link {
+  padding: 8px 58px;
+}
+  .live {
+    width: 100%;
+  }
+
+  .wrapper-calender {
+    width: 100px;
+  }
+
+  .wrapper-calender {
+    
+  }
+
+  .time-match tr {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .time-match__detail {
+    margin-right: 0;
+  }
+  .time-match__detail span {
+    margin-left: 0;
+  }
+  
+  .time-match__detail-name {
+    margin-right: 17px;
+  }
+
+  .button-watch {
+    display: none;
+  }
+
+  .match-detail__goal {
+    margin: 0 12px;
+  }
+
+  .match-detail {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .time-match__detail {
+    margin-bottom: 16px;
+  }
+
+
+  .list-match  {
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    height: auto;
+    background-image: none;
+  }
+
+  .footer img {
+    display: block;
+    width: 100%;
   }
 }
 
